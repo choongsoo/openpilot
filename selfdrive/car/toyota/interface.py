@@ -124,13 +124,13 @@ class CarInterface(CarInterfaceBase):
 
     tune = ret.longitudinalTuning
     if candidate in TSS2_CAR or ret.enableGasInterceptorDEPRECATED:
-      tune.kiBP = [0.,  12.,  16,   20.,  27.,  36.,  50]
-      tune.kiV = [0.33, 0.22, 0.19, 0.17, 0.10, 0.07, 0.01]
+      tune.kiBP = [0., 0.1, 1., 2., 3., 5., 8., 12., 14., 20., 26., 36., 50]
+      tune.kiV = [0.346, 0.35, 0.33, 0.309, 0.289, 0.231, 0.222, 0.2085, 0.19, 0.17, 0.10, 0.06, 0.01]
       if candidate in TSS2_CAR:
         ret.vEgoStopping = 0.25
         ret.vEgoStarting = 0.25
         ret.stopAccel = -0.40
-        ret.stoppingDecelRate = 0.30  # reach stopping target smoothly
+        ret.stoppingDecelRate = 0.40  # reach stopping target smoothly
     else:
       tune.kiBP = [0., 5., 35.]
       tune.kiV = [3.6, 2.4, 1.5]
