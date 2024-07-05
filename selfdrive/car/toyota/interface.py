@@ -130,6 +130,7 @@ class CarInterface(CarInterfaceBase):
       ret.vEgoStarting = 0.25
       ret.stoppingDecelRate = 0.3  # reach stopping target smoothly
       ret.stopAccel = -1.2 # from dp pcm compensation
+      ret.longitudinalActuatorDelay = 0.18 # try matching the steer delay
     else:
       tune.kiBP = [0., 5., 35.]
       tune.kiV = [3.6, 2.4, 1.5]
