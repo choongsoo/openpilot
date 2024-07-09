@@ -169,7 +169,8 @@ class CAR(Platforms):
       ToyotaCarDocs("Toyota Highlander 2017-19", video_link="https://www.youtube.com/watch?v=0wS0wXSLzoo"),
       ToyotaCarDocs("Toyota Highlander Hybrid 2017-19"),
     ],
-    CarSpecs(mass=4516. * CV.LB_TO_KG, wheelbase=2.8194, steerRatio=16.0, tireStiffnessFactor=0.8),
+#    CarSpecs(mass=4516. * CV.LB_TO_KG, wheelbase=2.8194, steerRatio=16.0, tireStiffnessFactor=0.8),
+    CarSpecs(mass=4595. * CV.LB_TO_KG, wheelbase=2.8499, steerRatio=16.0, tireStiffnessFactor=0.8), # updated for 2021 Highlander Hybrid Limited AWD
     dbc_dict('toyota_tnga_k_pt_generated', 'toyota_adas'),
     flags=ToyotaFlags.NO_STOP_TIMER | ToyotaFlags.SNG_WITHOUT_DSU,
   )
